@@ -16,7 +16,7 @@ public class Main {
         NumberPrinter numberPrinter = new NumberPrinter(upperBoundNumber);
         Thread numberPrinterThread = new Thread(numberPrinter);
         numberPrinterThread.start();
-        
+
         Thread.sleep(timeInterval);
         numberPrinterThread.interrupt();
         if (numberPrinterThread.isAlive()) {
