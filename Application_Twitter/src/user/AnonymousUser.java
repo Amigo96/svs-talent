@@ -1,6 +1,7 @@
 package user;
 
 import logger.Logger;
+import tweet.TweetRepository;
 
 import java.util.Scanner;
 
@@ -19,7 +20,7 @@ public class AnonymousUser implements User {
     }
 
     public void listAllTweets(){
-        Logger.printTweets();
+        TweetRepository.printTweets();
     }
 
     @Override

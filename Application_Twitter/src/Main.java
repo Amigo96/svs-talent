@@ -1,5 +1,6 @@
 import logger.Logger;
 import sun.rmi.runtime.Log;
+import tweet.TweetRepository;
 import user.AnonymousUser;
 
 import java.io.BufferedReader;
@@ -13,18 +14,18 @@ public class Main {
         AnonymousUser anonymousUser = new AnonymousUser();
         AnonymousUser anonymousUser1 = new AnonymousUser();
         Logger logger = new Logger();
-        Logger.printTweets();
+       // TweetRepository.printTweets();
         Scanner scanner = new Scanner(System.in);
 
        // anonymousUser.tweetMessage();
         // anonymousUser1.tweetMessage();
 
 
-        Logger.printTweets();
+        //TweetRepository.printTweets();
 
-        Logger.log("Input \"1\" to Tweet a message");
-        Logger.log("Input \"2\" to list all tweets in reversed order");
-        Logger.log("Input \"3\" to quit the program");
+        System.out.println("Input \"1\" to Tweet a message");
+        System.out.println("Input \"2\" to list all tweets in reversed order");
+        System.out.println("Input \"3\" to quit the program");
     int tmpint ;
         while(true){
             tmpint=scanner.nextInt();
