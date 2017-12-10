@@ -1,14 +1,19 @@
 package user;
 
 import logger.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Component;
 import tweet.TweetRepository;
 
 import java.util.Scanner;
 
+@Component
+@Profile("anonymous")
 public class AnonymousUser implements User {
     private long userId;
 
-
+@Autowired
     public AnonymousUser(){
         this.userId = this.hashCode();
 

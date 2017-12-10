@@ -1,5 +1,9 @@
 package tweet;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Tweet {
     private String tweet;
 
@@ -7,6 +11,7 @@ public class Tweet {
         setTweet(tweet);
     }
 
+    @Autowired
     public void setTweet(String tweet){
         this.tweet = tweet;
     }

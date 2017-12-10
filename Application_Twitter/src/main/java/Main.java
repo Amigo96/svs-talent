@@ -1,27 +1,22 @@
-import logger.Logger;
-import sun.rmi.runtime.Log;
-import tweet.TweetRepository;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 import user.AnonymousUser;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.Scanner;
 
+@SpringBootApplication
 public class Main {
-
-
     public static void main(String[] args) throws Exception {
+        ApplicationContext ctx =
+                SpringApplication.run(Main.class, args);
+       ctx.getBean(AnonymousUser.class).tweetMessage();
+
+
+
+/*
         AnonymousUser anonymousUser = new AnonymousUser();
-        AnonymousUser anonymousUser1 = new AnonymousUser();
         Logger logger = new Logger();
-       // TweetRepository.printTweets();
         Scanner scanner = new Scanner(System.in);
-
-       // anonymousUser.tweetMessage();
-        // anonymousUser1.tweetMessage();
-
-
-        //TweetRepository.printTweets();
 
         System.out.println("Input \"1\" to Tweet a message");
         System.out.println("Input \"2\" to list all tweets in reversed order");
@@ -40,7 +35,7 @@ public class Main {
 
 
         }
-
+*/
     }
 
 }

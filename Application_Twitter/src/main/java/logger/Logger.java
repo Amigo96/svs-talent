@@ -1,13 +1,14 @@
 package logger;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import tweet.Tweet;
 import tweet.TweetRepository;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-
+@Component
 public class Logger {
 
+    @Autowired
     public Logger() {
 
     }
