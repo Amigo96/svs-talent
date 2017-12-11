@@ -6,12 +6,15 @@ import org.springframework.data.repository.CrudRepository;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 @Entity
-public class Administrator extends Employee implements AdministratorLibrary {
-   /* @Id
+public class Administrator implements AdministratorLibrary {
+   @Id
     @GeneratedValue
-    private Long id;*/
+    private Long id;
+
+   @Transient
     BookRepository bookRepository;
 
 
