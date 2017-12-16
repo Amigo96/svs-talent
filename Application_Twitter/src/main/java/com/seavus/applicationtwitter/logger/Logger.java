@@ -1,9 +1,9 @@
-package logger;
+package com.seavus.applicationtwitter.logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import tweet.Tweet;
-import tweet.TweetRepository;
+import com.seavus.applicationtwitter.tweet.Tweet;
+import com.seavus.applicationtwitter.tweet.TweetRepository;
 
 @Component
 public class Logger {

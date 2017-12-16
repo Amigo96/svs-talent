@@ -1,12 +1,13 @@
-package user;
+package com.seavus.applicationtwitter.user;
 
-import logger.Logger;
+import com.seavus.applicationtwitter.logger.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
-import tweet.TweetRepository;
+import com.seavus.applicationtwitter.tweet.TweetRepository;
 
 import java.util.Scanner;
+
 
 @Component
 @Profile("anonymous")
@@ -17,6 +18,11 @@ public class AnonymousUser implements User {
     public AnonymousUser(){
         this.userId = this.hashCode();
 
+    }
+
+    public void tweetRandomMessage(){
+       // Logger.log("randomMessageExample");
+        System.out.println("startSpringProject");
     }
 
     public void tweetMessage(){
