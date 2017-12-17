@@ -1,18 +1,22 @@
 package com.seavus.applicationtwitter;
 
+import com.seavus.applicationtwitter.user.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import com.seavus.applicationtwitter.user.AnonymousUser;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 
 @SpringBootApplication
+@EnableJpaRepositories
 public class Main {
     public static void main(String[] args) throws Exception {
         ApplicationContext ctx =
                 SpringApplication.run(Main.class, args);
-       ctx.getBean(AnonymousUser.class).tweetRandomMessage();
+      // ctx.getBean(AnonymousUser.class).tweetRandomMessage();
 
+
+       User user = new User("nikola@ymail.com");
 
 
 /*
@@ -39,5 +43,12 @@ public class Main {
         }
 */
     }
-
+/*
+   @Bean
+   CommandLineRunner runner(UserRepository user) {
+        return args -> {
+            user.save(new User("mail@yahoo.com"));
+        };
+    }
+*/
 }

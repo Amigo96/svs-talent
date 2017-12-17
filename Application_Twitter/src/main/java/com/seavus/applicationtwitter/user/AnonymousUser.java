@@ -4,14 +4,20 @@ import com.seavus.applicationtwitter.logger.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
-import com.seavus.applicationtwitter.tweet.TweetRepository;
+import com.seavus.applicationtwitter.tweet.TweetRepositoryDeprecated;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Scanner;
 
 
 @Component
+@Entity
 @Profile("anonymous")
-public class AnonymousUser implements User {
+public class AnonymousUser {
+   @Id
+   @GeneratedValue
     private long userId;
 
 @Autowired
@@ -31,7 +37,7 @@ public class AnonymousUser implements User {
     }
 
     public void listAllTweets(){
-        TweetRepository.printTweets();
+        TweetRepositoryDeprecated.printTweets();
     }
 
     @Override
