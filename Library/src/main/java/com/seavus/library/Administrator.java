@@ -1,6 +1,7 @@
 package com.seavus.library;
 
 import com.seavus.library.unnecessary.LibraryDB;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 
 import javax.persistence.Entity;
@@ -9,20 +10,18 @@ import javax.persistence.Id;
 import javax.persistence.Transient;
 
 @Entity
-public class Administrator implements AdministratorLibrary {
+public class Administrator /* implements AdministratorLibrary */ {
    @Id
     @GeneratedValue
     private Long id;
 
-   @Transient
-    BookRepository bookRepository;
 
-
+   @Autowired
     public Administrator(){
-        super();
+
     }
 
-
+/*
     @Override
     public void registerBook(String bookName, String isbn) {
        // LibraryDB.add(new Book(bookName,isbn));
@@ -50,4 +49,6 @@ public class Administrator implements AdministratorLibrary {
     public void bookLending() {
 
     }
+
+*/
 }

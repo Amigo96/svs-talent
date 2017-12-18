@@ -1,5 +1,7 @@
 package com.seavus.library;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -19,7 +21,7 @@ public class Book {
     @ManyToMany //(mappedBy = "books")
     Collection<Member> members;
 
-
+    @Autowired
     public Book(){}
 
     public Book(String title,String isbn){
@@ -27,7 +29,10 @@ public class Book {
         this.isbn = isbn;
     }
 
+    /*
     public void zdravo(){
+
         System.out.println("Zz");
     }
+    */
 }

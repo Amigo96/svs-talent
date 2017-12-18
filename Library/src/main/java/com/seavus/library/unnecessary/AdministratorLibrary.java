@@ -1,4 +1,4 @@
-package com.seavus.library;
+package com.seavus.library.unnecessary;
 
 import org.springframework.data.repository.CrudRepository;
 

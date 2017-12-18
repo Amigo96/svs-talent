@@ -7,9 +7,17 @@ import java.util.Collection;
 public class Member {
     @Id
     @GeneratedValue
-    Long id;
+    private Long id;
+    private String name;
+
+    public Member(){}
+
 
     @ManyToMany(mappedBy = "members")
     Collection<Book> books;
 
+    public Member(Long id, String name) {
+    this.id = id;
+    this.name = name ;
+    }
 }
