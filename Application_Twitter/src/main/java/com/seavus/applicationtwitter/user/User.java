@@ -13,7 +13,8 @@ import java.util.Collection;
 @Entity
 @Component
 
-public class User {
+public class
+User {
 @Id
     private String email;
 
